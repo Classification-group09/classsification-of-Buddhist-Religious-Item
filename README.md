@@ -37,4 +37,4 @@ Click here to visit our [Web-Application](https://classificationofreligiousitem.
 <img src='https://github.com/Classification-group09/classsification-of-Buddhist-Religious-Item/blob/master/screenshots/4.jpeg'>
 
 **Final poster**
-
+<img src=''>
