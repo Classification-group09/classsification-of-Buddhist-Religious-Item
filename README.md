@@ -38,4 +38,4 @@ Click here to visit our [Web-Application](https://classificationofreligiousitem.
 
 **Final poster**
 
-<img src='https://github.com/Classification-group09/classsification-of-Buddhist-Religious-Item/blob/main/screenshots/Classification of buddhist religious item.png'>
+<img src='https://github.com/Classification-group09/classsification-of-Buddhist-Religious-Item/blob/main/screenshots/classification.png'>
