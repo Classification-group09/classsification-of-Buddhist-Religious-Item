@@ -20,6 +20,8 @@ This web-application is developed to classify following Buddhist religious item:
 4.	Butter lamp
 5.	Incense burner
 6.	Bumpa
+
+
 **Images and videos**
 
 *Check our [video](https://www.youtube.com/watch?v=PiHoW80ljVI)*
