@@ -22,7 +22,7 @@ This web-application is developed to classify following Buddhist religious item:
 6.	Bumpa
 **Images and videos**
 
-*Check our [video]*(https://www.youtube.com/watch?v=PiHoW80ljVI)
+*Check our [video](https://www.youtube.com/watch?v=PiHoW80ljVI)*
 
 **Screenshot of the web-application**
 
