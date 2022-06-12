@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Buddhist Item Classification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{url_for('static', filename='codecss.css')}}">
+  <link rel="shortcut icon" href="logo.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <section id="header">
+    <div class="header">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <img src="{{url_for('static', filename='b.png')}}" style="height: 13vh; width: 34vh;">
+          </a>
+        </div>
+      <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="/" data-after="Home" style="font-size: 30px; font-family: 'Courier New', Courier, monospace;">Home</a></li>
+            <li><a href="{{url_for('details')}}" data-after="Service" style="font-size: 30px; font-family: 'Courier New', Courier, monospace;">Details</a></li>
+            <li><a href="{{url_for('about')}}" data-after="About" style="font-size: 30px; font-family: 'Courier New', Courier, monospace;">About-Team</a></li>
+
+            <!-- <li><a href="#projects" data-after="Projects">Disease</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <div class="Religious" style="text-align: center;">
+    <img src="{{url_for('static', filename='buddalogo.png')}}" alt="website logo" height="auto" class="img-fluid">
+  </div> -->
+
+ <!--  <div class="row ritems">
+
+    <div class="column">
+      <img src="{{url_for('static', filename='butterlamp.png')}}" alt="Butter lamp" class="img-fluid">
+    </div>
+
+    <div class="column">
+      <img src="{{url_for('static', filename='bumpa.png')}}" alt="Bumpa" class="img-fluid">
+    </div>
+
+    <div class="column">
+      <img src="{{url_for('static', filename='incense1.png')}}" alt="incenseBurner" class="img-fluid">
+    </div>
+
+    <div class="column">
+      <img src="{{url_for('static', filename='mikkyoffering.png')}}" alt="mikkyofferng" class="img-fluid">
+    </div>
+
+    <div class="column">
+      <img src="{{url_for('static', filename='wateroffering.png')}}" alt="wateroffering" class="img-fluid">
+    </div>
+
+    <div class="column">
+      <img src="{{url_for('static', filename='rosary1.png')}}" alt="Rosary" class="img-fluid">
+    </div>
+
+  </div> -->
+
+  <div class="banner" style="margin-top: 12vh;">
+    <div class="info">
+      <h1 style="color: black; font-family: Georgia;">UPLOAD IMAGE</h1><br>
+      <div class="whole" style="width:40.4%;">
+        <div class="wrapper">
+          <!-- <div id="imgs" class="image"> -->
+          <div class="image">
+            <img id="rrr">
+          </div>
+          <div class="content">
+            <!-- icon -->
+            <div class="icon">
+              <i class="fas fa-upload"></i>
+            </div>
+
+          </div>
+          <!-- delete -->
+          <div id="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <!-- <button onclick="defaultBtnActive()" id="custom-btn">Select Image</button>
+                <input id="default-btn" type="file" hidden> -->
+
+
+
+        <!-- <button onclick="" id="custom-btn">Submit Image</button>
+                <input id="default-btn" type="file" hidden> -->
+      </div>
+    </div>
+  </div>
+
+  <form class="text-center mb-5" method="post" enctype="multipart/form-data" action="submit">
+    <span onclick="defaultBtnActive()" id="custom-btn" class="selbtn btn btn-primary" style="text-align: center;">
+      <input id="default-btn" name="my_image" type="file" accept="image/*" autocomplete="off" required hidden >Select</span>
+    
+    <!-- <input type="submit" id="custom-btn" value="Classify"></input> -->
+    <div class="mt-3">
+      <button class="btn btn-success btn-lg" type="submit" autocomplete="off" required>Classify</button>
+      <a href="{{url_for('remove')}}" class="btn btn-danger btn-lg">Remove</a>
+    </div> 
+  </form>
+
+  <script>
+    const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+    const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+    const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+    const header = document.querySelector('.header.container');
+
+      hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobile_menu.classList.toggle('active');
+    });
+
+    document.addEventListener('scroll', () => {
+    var scroll_position = window.scrollY;
+    if (scroll_position > 250) {
+        header.style.backgroundColor = '#29323c';
+    } else {
+        header.style.backgroundColor = 'transparent';
+    }
+    });
+
+    menu_item.forEach((item) => {
+    item.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobile_menu.classList.toggle('active');
+      });
+  });
+    const wrapper = document.querySelector(".wrapper");
+    const fileName = document.querySelector(".file-name");
+    const defaultBtn = document.querySelector("#default-btn");
+    const customBtn = document.querySelector("#custom-btn");
+    const cancelBtn = document.querySelector("#cancel-btn i");
+    const img = document.querySelector("#rrr");
+    // var imgs = document.getElementById("imgs");
+
+
+    let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+
+
+    function defaultBtnActive() {
+      defaultBtn.click();
+    }
+    defaultBtn.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function () {
+          const result = reader.result;
+          img.src = result;
+          wrapper.classList.add("active");
+        }
+        cancelBtn.addEventListener("click", function () {
+          img.src = "";
+          wrapper.classList.remove("active");
+        })
+        reader.readAsDataURL(file);
+      }
+      if (this.value) {
+        let valueStore = this.value.match(regExp);
+        fileName.textContent = valueStore;
+      }
+    });
+  </script>
+
+
+
+
+<div class="container text-center mt-2">
+  {% if prediction %}
+  <p class="fs-1 text-black">Classification Result: </p>
+  <img src="{{img_path}}" class="img-fluid" height="300px" width="350px" float="center"><br><br>
+  <h2 style="font-size: 25px; color:black;"><i>{{prediction}}</i></h2>
+  {% endif %}
+</div>
+  
+  </div>
+
+
+  <footer class="foot container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 mb-4 mb-md-0" style="color: white;">
+
+        <h5>About Us</span></h5>
+        <p class="footer-company-name px-3" style="text-align:justify">This website was built by a group of students from <a
+            href="https://www.gcit.edu.bt/" style="color: #ADD8E6;">Gyalpozhing College of Information Technology</a> as
+          a part of their third year project (<a
+            href="https://www.tensorflow.org/resources/learn-ml/theoretical-and-advanced-machine-learning?gclid=EAIaIQobChMI1aD-rLb39wIVVwwrCh1xHAQmEAAYASACEgJpcPD_BwE"
+            style="color: #ADD8E6;">Machine Learning</a>). The main aim of our website is to classify Buddhist religious
+          items to educate the youths and preserve our culture and tradition. Our web application can classify up to six
+          different religious item.</p>
+
+      </div>
+
+      <div class="col-lg-6 col-sm-12 mb-4 mb-md-0" style="text-align: center; color: white;">
+
+        <h5>Contact Us</span></h5>
+        <p class="footer-company-name">Hello, you can reach out to us for futher details.</p>
+        <p class="footer-company-name"> Email: classificationofreligiousitem@gmail.com</p>
+        <p class="footer-company-name">Dataset: <a
+            href="https://www.kaggle.com/datasets/tsheringgyeltshen/classification-of-buddhist-religious-items"
+            style="color: #ADD8E6;">Buddhist religious items</a></p>
+
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>

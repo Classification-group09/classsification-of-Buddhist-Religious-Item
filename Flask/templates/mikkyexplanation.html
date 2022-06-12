@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='explanation.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <section id="header">
+        <div class="header">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#hero">
+                        <img src="{{url_for('static', filename='b.png')}}" style="height: 13vh; width: 34vh;">
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <li><a href="/" data-after="Home"
+                                style="font-size: 30px; font-family: 'Courier New', Courier, monospace;">Home</a></li>
+                        <li><a href="{{url_for('details')}}" data-after="Service"
+                                style="font-size: 30px; font-family: 'Courier New', Courier, monospace;">Details</a>
+                        </li>
+                        <li><a href="{{url_for('about')}}" data-after="About"
+                                style="font-size: 30px; font-family: 'Courier New', Courier, monospace;">About-Team</a></li>
+
+                        <!-- <li><a href="#projects" data-after="Projects">Disease</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+        const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+        const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+        const header = document.querySelector('.header.container');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobile_menu.classList.toggle('active');
+        });
+
+        document.addEventListener('scroll', () => {
+            var scroll_position = window.scrollY;
+            if (scroll_position > 250) {
+                header.style.backgroundColor = '#29323c';
+            } else {
+                header.style.backgroundColor = 'transparent';
+            }
+        });
+
+        menu_item.forEach((item) => {
+            item.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mobile_menu.classList.toggle('active');
+            });
+        });
+    </script>
+    <!-- Container -->
+    <div class="container mt-32 mx-auto p-4 md:p-0">
+
+        <!-- Card wrapper -->
+        <div class="shadow-lg flex flex-wrap w-full lg:w-3/5 mx-auto">
+
+            <!-- Card image -->
+            <div class="bg-cover bg-bottom border w-full md:w-1/3 h-64 md:h-auto relative" >
+                <img src="{{url_for('static', filename='mikkydetails.png')}}" style="margin-top:6vh ;">
+            </div>
+            <!-- ./Card image -->
+
+            <!-- Card body -->
+            <div class="bg-white w-full md:w-2/3"
+                style="background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);">
+                <!-- Card body - outer wrapper -->
+                <div class="h-full mx-auto px-6 md:px-0 md:pt-6 md:-ml-6 relative">
+                    <!-- Card body - inner wrapper -->
+                    <div
+                        class="bg-white lg:h-full p-6 -mt-6 md:mt-0 relative mb-4 md:mb-0 flex flex-wrap md:flex-wrap items-center">
+                        <!-- Card title and subtitle -->
+                        <div class="w-full lg:w-5/5 lg:border-right lg:border-solid text-center md:text-left">
+                            <h3>Mikky Offering Bowl (གསེར་སྐྱེམས་ཕུལ་ས།)</h3>
+                            <!-- <p class="mb-0 mt-3 text-grey-dark text-sm italic">Moscow - Russia</p> -->
+                            <hr class="w-1/4 md:ml-0 mt-4  border lg:hidden">
+                        </div>
+                        <!-- ./Card title and subtitle -->
+
+                        <!-- Card description -->
+                        <div class="w-full lg:w-5/5 lg:px-4">
+                            <p class="text-md mt-6 lg:mt-1 text-justify md:text-left text-sm">
+                                The ‘Mikky offering Bowl’ also known as 'phicho (ཕུད་ཀོང།)' is one of the religious item found in most of the alters in Buddhist homes. It basically is a container that is used for the storage of liquid or solid food items. 
+                                The phicho consist of two parts. The upper part consists of small bowl with narrow stem resting on a base or foot. The lower part is bowl with wide inner surface. It rest on the base but does not have stem. 
+                                The phicho is made up of different metals and its alloy. Common metal used are copper, brass, silver and often gold. 
+                                The phicho is used for the offering of food items along with liquid (usually alcohol or tea) to appease the god or deity. 
+                                
+
+                            </p>
+                        </div>
+                        <!-- ./Card description -->
+
+                        <!-- Call to action button -->
+                        <!-- <div class="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
+                            <button
+                                class="bg-white hover:bg-grey-darker hover:text-white border border-solid border-grey w-1/3 lg:w-full py-2">Visit
+                                now</button>
+                        </div> -->
+                        <!-- ./Call to action button -->
+                    </div>
+                    <!-- ./Card body - inner wrapper -->
+                </div>
+                <!-- ./Card body - outer wrapper -->
+            </div>
+            <!-- ./Card body -->
+        </div>
+        <!-- ./Card wrapper -->
+    </div>
+    <!-- ./Container -->
+    <footer class="foot container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0" style="color: white;">
+
+                <h5>About Us</span></h5>
+                <p class="footer-company-name px-3" style="text-align:justify">This website was built by a group of
+                    students
+                    from <a href="https://www.gcit.edu.bt/" style="color: #ADD8E6;">Gyalpozhing College of Information
+                        Technology</a> as
+                    a part of their third year project (<a
+                        href="https://www.tensorflow.org/resources/learn-ml/theoretical-and-advanced-machine-learning?gclid=EAIaIQobChMI1aD-rLb39wIVVwwrCh1xHAQmEAAYASACEgJpcPD_BwE"
+                        style="color: #ADD8E6;">Machine Learning</a>). The main aim of our website is to classify
+                    Buddhist
+                    religious
+                    items to educate the youths and preserve our culture and tradition. Our web application can classify
+                    up
+                    to six
+                    different religious item.</p>
+
+            </div>
+
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0" style="text-align: center; color: white;">
+
+                <h5>Contact Us</span></h5>
+                <p class="footer-company-name">Hello, you can reach out to us for futher details.</p>
+                <p class="footer-company-name"> Email: classificationofreligiousitem@gmail.com</p>
+                <p class="footer-company-name">Dataset: <a
+                        href="https://www.kaggle.com/datasets/tsheringgyeltshen/classification-of-buddhist-religious-items"
+                        style="color: #ADD8E6;">Buddhist religious items</a></p>
+
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
