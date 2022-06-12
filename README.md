@@ -4,7 +4,7 @@
 
 This web-application is built to classify six different type of Buddhist religious item. This web-application uses Deep Learning algorithm (Convolutional Neural Network) to classify the religious item into their respective class. 
 
-Website built using: HTML/CSS/JS, Bootstrap, Flask, Python
+Website built using: HTML/CSS/JS, Bootstrap, Flask and Python
 
 Click here to visit our [Web-Application](https://classificationofreligiousitem.herokuapp.com/)
 
