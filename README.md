@@ -7,9 +7,10 @@ This web-application was built to classify six different type of Buddhist religi
 Website built using: HTML/CSS/JS, Bootstrap, Flask, Python
 Click here to visit our Web-Application
 Why classification of Buddhist Religious Item
-•	To preserve culture
-•	To educate youth about Buddhist religious items and its purpose.
-•	To provide online web based interface to classify Buddhist religious item.
+- 	To preserve culture
+- 	To educate youth about Buddhist religious items and its purpose
+- 	To provide online web based interface to classify Buddhist religious item
+
 This web-application is developed to classify following Buddhist religious item:
 1.	Dorje/Vajra
 2.	Rosary
