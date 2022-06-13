@@ -2,7 +2,7 @@
 
 #### Gyalpozhing College of Information Technology (Bachelor of Science in Information Technology) third year project.
 
-This web-application is built to classify six different type of Buddhist religious item. This web-application uses Deep Learning algorithm (Convolutional Neural Network) to classify the religious item into their respective class. 
+This web-application is built to classify six different type of Buddhist religious item. This web-application uses Deep Learning algorithm (Convolutional Neural Network) to classify the religious item into their respective class. The CNN model automatically learns the relevant attributes without the need for human interaction. For example, we have seven different class images in our project, and it learns unique features for each. Furthermore, CNN is a computationally efficient algorithm.
 
 Website built using: HTML/CSS/JS, Bootstrap, Flask and Python
 
