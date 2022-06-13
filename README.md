@@ -10,6 +10,7 @@ Click here to visit our [Web-Application](https://classificationofreligiousitem.
 
 **Why classification of Buddhist Religious Item**
 - 	To preserve culture
+- 	To create dataset which can be used by future researchers
 - 	To educate youth about Buddhist religious items and its purpose
 - 	To provide online web based interface to classify Buddhist religious item
 
