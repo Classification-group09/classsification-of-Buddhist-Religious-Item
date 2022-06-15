@@ -25,7 +25,7 @@ Click here to visit our [Web-Application](https://classificationofreligiousitem.
 
 **Images and videos**
 
-*Check our [video](https://www.youtube.com/watch?v=xkXEPYWTHmg)*
+*Check our [video](https://www.youtube.com/watch?v=AM5m7fF9FbU)*
 
 **Screenshot of the web-application**
 
